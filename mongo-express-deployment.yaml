@@ -5,7 +5,7 @@ metadata:
   labels:
     app: mongo-express
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mongo-express
@@ -17,6 +17,13 @@ spec:
       containers:
       - name: mongo-express
         image: mongo-express
+        resources:
+          limits:
+            cpu: "0.6" 
+            memory: "600Mi"
+          requests:
+            memory: 350Mi
+            cpu: 300m
         ports:
         - containerPort: 8081
         env:

@@ -19,11 +19,11 @@ spec:
         image: mongo-express
         resources:
           limits:
-            cpu: "0.6" 
-            memory: "600Mi"
+            cpu: "0.3" 
+            memory: "300Mi"
           requests:
-            memory: 350Mi
-            cpu: 300m
+            memory: 150Mi
+            cpu: 100m
         ports:
         - containerPort: 8081
         env:
